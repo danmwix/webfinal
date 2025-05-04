@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Chronicles - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .text-cyan {
+            color: #00f7ff !important;
+        }
+        /* Contact form styles */
+        .form-control.bg-transparent {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #00f7ff;
+            color: #fff;
+        }
+        .form-control.bg-transparent::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .form-control.bg-transparent:focus {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #00f7ff;
+            color: #fff;
+            box-shadow: 0 0 10px #00f7ff;
+        }
+        .btn-custom {
+            background: linear-gradient(45deg, #00f7ff, #ff00ff);
+            border: none;
+            padding: 12px 40px;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            color: #000;
+        }
+        .btn-custom:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+            color: #000;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient bg-dark">
+            <div class="container">
+                <a class="navbar-brand font-orbitron" href="index.html">
+                    <img src="images/logo.png" alt="Cosmic Chronicles Logo" class="d-inline-block align-text-top" style="height: 40px;">
+                    Cosmic Chronicles
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="font-orbitron text-center mb-4">Contact Us</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form action="https://formspree.io/f/xldjplze" method="POST" id="contact-form">
+                            <div class="mb-3">
+                                <input type="text" class="form-control bg-transparent text-white" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control bg-transparent text-white" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control bg-transparent text-white" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100">Transmit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-center py-4">
+        <p>© 2025 Cosmic Chronicles. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sound Effect on Form Submit
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', () => {
+            const audio = new Audio('https://www.soundjay.com/buttons/beep-01a.mp3');
+            audio.play();
+        });
+    </script>
+</body>
+</html>
